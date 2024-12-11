@@ -1,6 +1,10 @@
 # LaravelProject
 
 ## 11-12-2024
+-Base repository gemaakt en toegevoegd aan github
+-handleiding van school op github
+-composer fatsoenlijk opzetten & database aanmaken was lastig vanwege andere phpstorm interface. de rest ging goed.
+-Github koppellen met terminal. 
 
 
 ## Format
