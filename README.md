@@ -1,5 +1,11 @@
 # LaravelProject
 
+## 15-12-2024
+Web.php about-us route toegevoegd. AboutUsController toegevoegd. About us view toegevoegd
+-handleiding an school op github
+-alles ging goed
+-controllers gebruiken in laravel
+
 ## 11-12-2024
 -Base repository gemaakt en toegevoegd aan github
 -handleiding van school op github
