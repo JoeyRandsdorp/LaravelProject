@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class AboutUsController
 {
     public function index()  {
-        return "test";
+        return view('about-us');
     }
 }

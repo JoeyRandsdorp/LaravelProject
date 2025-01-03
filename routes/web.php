@@ -1,26 +1,16 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function() {
     return view('index');
-    echo "server is working";
 });
-Route::get('/about-us', function() {
-    $restaurant = 'Dickens & Jones';
-    return view('about-us', [
-        'company' => $restaurant
-    ]);
-});
+Route::get('/about-us', [AboutUsController::class, 'index']);
+
 Route::get('/contact', function(){
     return view('contact');
-});
-Route::get('/restaurants', function(){
-    $restaurant = "Dickens & Jones";
-    return view('restaurants', [
-        'restaurant' => $restaurant
-    ]);
 });
 Route::get('/login', function(){
     return view('login');
@@ -29,7 +19,11 @@ Route::get('/register', function(){
     return view('register');
 });
 
+Route::get('restaurants/{restaurant}', function(string $restaurant) {
+    return view('restaurants', [
+        'restaurant' => $restaurant
+    ]);
+}) ->name('rRestaurant');
 
 
-
-Route::get("/test/", [AboutUsController::class, 'index']);
+Route::resource('products', ProductController::class);
